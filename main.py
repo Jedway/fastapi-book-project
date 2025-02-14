@@ -1,8 +1,11 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.router import api_router
 
 from core.config import settings
+
+PORT = int(os.getenv('PORT', 10000))
 
 app = FastAPI()
 
